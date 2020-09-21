@@ -1,0 +1,24 @@
+body  {
+  max-width: 1250px;
+}
+
+/* .content  {
+  width: 1250px;
+} */
+
+
+#average {
+  text-align: right;
+  font-size: 1.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* .row {
+  width: 100%;
+} */
+
+/* .container  {
+  width: 100%;
+  margin: auto 0;
+} */
