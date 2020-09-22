@@ -66,6 +66,7 @@ class GradeTable  {
     this.tableElement.append(tr);
 
     // Not sure why return the tr
+    return tr;
   }
 
 }
