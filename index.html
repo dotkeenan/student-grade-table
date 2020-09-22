@@ -6,12 +6,15 @@
   <title>Student Grade Table</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-grid.min.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Student Grade Table</h1>
-  </header>
-
+  <div class="container">
+    <header id="header" class="row align-items-center justify-content-between no-gutters">
+      <h1 class="col-sm-8">Student Grade Table</h1>
+      <h2 id="average" class="col-sm-4">Average Grade <span class="badge badge-success"></span></h2>
+    </header>
+  </div>
   <table class="table table-bordered table-striped table-hover">
     <thead class="thead-dark">
       <tr>
@@ -47,6 +50,7 @@
   </script>
   <script src="components/app.js"></script>
   <script src="components/grade-table.js"></script>
+  <script src="components/page-header.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
