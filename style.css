@@ -1,11 +1,7 @@
 body  {
   max-width: 1250px;
+  /* border: 2px solid red; */
 }
-
-/* .content  {
-  width: 1250px;
-} */
-
 
 #average {
   text-align: right;
@@ -14,11 +10,14 @@ body  {
   margin-bottom: auto;
 }
 
-/* .row {
-  width: 100%;
+/* .col-sm-7, .col-sm-4 {
+  border: 2px solid chartreuse;
 } */
 
-/* .container  {
-  width: 100%;
-  margin: auto 0;
-} */
+button  {
+  margin-right: 15px
+}
+
+.hidden {
+  display: none;
+}
