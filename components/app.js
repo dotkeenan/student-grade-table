@@ -76,9 +76,6 @@ class App {
   // Need to figure out how this works as well, and how it works with the
   // other .js files.
   deleteGrade(id) {
-    // temporary for now
-    console.log(id);
-
     $.ajax({
       url: 'https://sgt.lfzprototypes.com/api/grades/' + id,
       method: 'DELETE',

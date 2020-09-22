@@ -1,3 +1,4 @@
+// Old code for when I used the <p> element for No Grades Recorded
 // class GradeTable  {
 //   constructor(tableElement, noGradesElement) {
 //     this.tableElement = tableElement;
@@ -9,10 +10,9 @@ class GradeTable  {
   }
 
   updateGrades(grades)  {
-    // temporary
-    console.log(grades);
     this.tableElement.textContent = '';
 
+    // Old code for when I used the <p> element for No Grades Recorded
     // if (grades.length) {
     //   this.noGradesElement.classList.add('d-none');
     // } else {
@@ -33,7 +33,6 @@ class GradeTable  {
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade)
     }
-
   }
 
   onDeleteClick(deleteGrade)  {
@@ -66,8 +65,7 @@ class GradeTable  {
     tr.append(nameTd, courseTd, gradeTd, operationsTd);
     this.tableElement.append(tr);
 
-    // am I supposed to return the tr?
-    return tr;
+    // Not sure why return the tr
   }
 
 }
