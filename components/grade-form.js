@@ -24,7 +24,6 @@ class GradeForm {
     this.createGrade(formDataName, formDataCourse, formDataGrade);
 
     //call reset() method of the target property of the event object to reset form
-    // this could be wrong
     event.target.reset();
   }
 }

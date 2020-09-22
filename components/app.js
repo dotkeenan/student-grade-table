@@ -14,6 +14,7 @@ class App {
     //temporary
     console.error(error);
   }
+
   handleGetGradesSuccess(grades)  {
     var gradeSum = null;
     this.gradeTable.updateGrades(grades);
@@ -24,6 +25,7 @@ class App {
     var gradeAverage = gradeSum / grades.length;
     this.pageHeader.updateAverage(gradeAverage);
   }
+
   getGrades() {
     $.ajax({
       url: 'https://sgt.lfzprototypes.com/api/grades',
@@ -36,17 +38,36 @@ class App {
       error:  this.handleGetGradesError
     });
   }
+
   start() {
     this.getGrades();
+    // I have no idea how this works.  Passing in a function as the argument.
     this.gradeForm.onSubmit(this.createGrade);
   }
+
   createGrade(name, course, grade) {
     //temporary
     console.log(name, course, grade);
+    $.ajax({
+      url: 'https://sgt.lfzprototypes.com/api/grades',
+      method: 'POST',
+      data: {
+        "name": name,
+        "course": course,
+        "grade": grade
+      },
+      headers:  {
+        "X-Access-Token": "iHaoaGnG"
+      },
+      success: this.handleCreateGradeSuccess,
+      error: this.handleCreateGradeError
+    });
   }
+
   handleCreateGradeError(error) {
     console.error(error);
   }
+
   handleCreateGradeSuccess()  {
     this.getGrades();
   }
