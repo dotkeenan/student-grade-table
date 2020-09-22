@@ -14,12 +14,12 @@
 <body>
   <div class="container">
     <header id="header" class="row align-items-center justify-content-between no-gutters">
-      <h1 class="col-sm-8">Student Grade Table</h1>
-      <h2 id="average" class="col-sm-4">Average Grade <span class="badge badge-success"></span></h2>
+      <h1 class="col-md-8">Student Grade Table</h1>
+      <h2 id="average" class="col-md-4">Average Grade <span class="badge badge-success"></span></h2>
     </header>
   </div>
   <div class="row justify-content-around">
-    <table class="col-sm-7 table table-bordered table-striped table-hover">
+    <table class="col-md-7 table table-bordered table-striped table-hover">
       <thead class="thead-dark">
         <tr>
           <th scope="col">Student Name</th>
@@ -32,7 +32,7 @@
 
     </table>
 
-    <form class="col-sm-4">
+    <form class="col-md-4 col-6">
 
       <div class="form-group">
         <label class="hidden" for="studentName"></label>
@@ -50,7 +50,7 @@
         <label class="hidden" for="studentCourse"></label>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">
+            <span class="input-group-text" id="basic-addon2">
                <i class="fas fa-book-open"></i>
             </span>
           </div>
@@ -62,7 +62,7 @@
         <label class="hidden" for="studentGrade"></label>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">
+            <span class="input-group-text" id="basic-addon3">
               <i class="fas fa-graduation-cap"></i>
             </span>
           </div>
@@ -71,8 +71,8 @@
       </div>
 
       <div class="row justify-content-end">
-        <button type="submit">Add</button>
-        <button type="reset">Cancel</button>
+        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
       </div>
     </form>
 

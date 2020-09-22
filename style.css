@@ -1,21 +1,37 @@
 body  {
   max-width: 1250px;
   /* border: 2px solid red; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  margin: 20px;
+}
+
+button  {
+  margin-right: 15px
+}
+
+span > i{
+  width: 18px;
+}
+
+button, input, .badge, .input-group-text  {
+-webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,.75);
+-moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,.75);
+box-shadow: 2px 2px 0px 0px rgba(0,0,0,.75);
+}
+
+table {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.32);
 }
 
 #average {
   text-align: right;
-  font-size: 1.5rem;
   margin-top: auto;
   margin-bottom: auto;
-}
-
-/* .col-sm-7, .col-sm-4 {
-  border: 2px solid chartreuse;
-} */
-
-button  {
-  margin-right: 15px
 }
 
 .hidden {
