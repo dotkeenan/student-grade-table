@@ -6,44 +6,77 @@
   <title>Student Grade Table</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-grid.min.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header id="header" class="row align-items-center justify-content-between no-gutters">
-      <h1 class="col-sm-8">Student Grade Table</h1>
-      <h2 id="average" class="col-sm-4">Average Grade <span class="badge badge-success"></span></h2>
+      <h1 class="col-md-8">Student Grade Table</h1>
+      <h2 id="average" class="col-md-4">Average Grade <span class="badge badge-success"></span></h2>
     </header>
   </div>
-  <table class="table table-bordered table-striped table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Student Name</th>
-        <th scope="col">Course</th>
-        <th scope="col">Grade</th>
-      </tr>
-    </thead>
+  <div class="row justify-content-around">
+    <table class="col-md-7 table table-bordered table-striped table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Student Name</th>
+          <th scope="col">Course</th>
+          <th scope="col">Grade</th>
+        </tr>
+      </thead>
 
-    <tbody>
-      <!-- <tr>
-        <th scope="row">Mark</th>
-        <td>Intro to React</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <th scope="row">Jacob</th>
-        <td>Intro to Javascript</td>
-        <td>99</td>
-      </tr>
-      <tr>
-        <th scope="row">Larry</th>
-        <td>Intro to HTML and CSS</td>
-        <td>98</td>
-      </tr> -->
-    </tbody>
+      <tbody></tbody>
 
-  </table>
+    </table>
 
+    <form class="col-md-4 col-6">
+
+      <div class="form-group">
+        <label class="hidden" for="studentName"></label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" name="name" id="studentName" placeholder="Name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="hidden" for="studentCourse"></label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon2">
+               <i class="fas fa-book-open"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" name="course" id="studentCourse" placeholder="Course" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="hidden" for="studentGrade"></label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">
+              <i class="fas fa-graduation-cap"></i>
+            </span>
+          </div>
+          <input type="number" class="form-control" name="grade" id="studentGrade" placeholder="Grade" required>
+        </div>
+      </div>
+
+      <div class="row justify-content-end">
+        <button type="submit" class="btn btn-primary">Add</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+      </div>
+    </form>
+
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
     integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
     crossorigin="anonymous">
@@ -51,6 +84,7 @@
   <script src="components/app.js"></script>
   <script src="components/grade-table.js"></script>
   <script src="components/page-header.js"></script>
+  <script src="components/grade-form.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
