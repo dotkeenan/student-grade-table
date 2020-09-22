@@ -1,7 +1,15 @@
 body  {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-class {
   max-width: 1250px;
-  /* border: 2px solid red; */
+  border: 2px solid black;
+  border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 0 25px 25px 25px;
+  margin: 25px auto;
 }
 
 header{
@@ -9,7 +17,7 @@ header{
 }
 
 button  {
-  margin-right: 15px
+  margin-left: 15px
 }
 
 span > i{
@@ -36,4 +44,9 @@ table {
 
 .hidden {
   display: none;
+}
+
+.row {
+  width: 100%;
+  margin-left: 0;
 }

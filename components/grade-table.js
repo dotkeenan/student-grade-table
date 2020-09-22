@@ -1,41 +1,39 @@
+// class GradeTable  {
+//   constructor(tableElement, noGradesElement) {
+//     this.tableElement = tableElement;
+//     this.noGradesElement = noGradesElement;
+//   }
 class GradeTable  {
-  constructor(tableElement, noGradesElement) {
+  constructor(tableElement) {
     this.tableElement = tableElement;
-    this.noGradesElement = noGradesElement;
   }
-  // updateGrades(grades)  {
-  //   // temporary
-  //   console.log(grades);
-  //   var tbody = this.tableElement.querySelector('tbody');
-  //   tbody.textContent = '';
-  //   for (var i = 0; i < grades.length; i++) {
-  //     var tr = document.createElement('tr');
 
-  //     var nameTd = document.createElement('td');
-  //     nameTd.textContent = grades[i]['name'];
-
-  //     var courseTd = document.createElement('td');
-  //     courseTd.textContent = grades[i]['course'];
-
-  //     var gradeTd = document.createElement('td');
-  //     gradeTd.textContent = grades[i]['grade'];
-
-  //     tr.append(nameTd, courseTd, gradeTd);
-  //     tbody.appendChild(tr);
-  //   }
-  // }
   updateGrades(grades)  {
     // temporary
     console.log(grades);
-    this.tableElement.querySelector('tbody').textContent = '';
+    this.tableElement.textContent = '';
+
+    // if (grades.length) {
+    //   this.noGradesElement.classList.add('d-none');
+    // } else {
+    //   this.noGradesElement.classList.remove('d-none');
+    // }
+
+    if (!grades.length) {
+      var noGradesTr = document.createElement('tr');
+      var noGradesTd = document.createElement('td');
+      noGradesTd.setAttribute('colspan', 4);
+      noGradesTd.style.textAlign = 'center';
+      noGradesTd.textContent = 'No Grades Recorded';
+
+      noGradesTr.append(noGradesTd);
+      this.tableElement.append(noGradesTr);
+    }
+
     for (var i = 0; i < grades.length; i++) {
       this.renderGradeRow(grades[i], this.deleteGrade)
     }
-    if (grades) {
-      this.noGradesElement.classList.add('d-none');
-    } else{
-      this.noGradesElement.classList.remove('d-none');
-    }
+
   }
 
   onDeleteClick(deleteGrade)  {
