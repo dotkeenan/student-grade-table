@@ -14,7 +14,6 @@ class App {
 
   }
   handleGetGradesError(error)  {
-    //temporary
     console.error(error);
   }
 
@@ -44,10 +43,12 @@ class App {
 
   start() {
     this.getGrades();
-    // I have no idea how this works.  Passing in a function as the argument.
+    // Not sure how this works.
     this.gradeForm.onSubmit(this.createGrade);
+    this.gradeTable.onDeleteClick(this.deleteGrade);
   }
 
+  // confused at this whole chain of events.
   createGrade(name, course, grade) {
     $.ajax({
       url: 'https://sgt.lfzprototypes.com/api/grades',
@@ -72,7 +73,8 @@ class App {
   handleCreateGradeSuccess()  {
     this.getGrades();
   }
-
+  // Need to figure out how this works as well, and how it works with the
+  // other .js files.
   deleteGrade(id) {
     // temporary for now
     console.log(id);
