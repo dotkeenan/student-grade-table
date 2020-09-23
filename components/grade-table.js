@@ -1,24 +1,10 @@
-// Old code for when I used the <p> element for No Grades Recorded
-// class GradeTable  {
-//   constructor(tableElement, noGradesElement) {
-//     this.tableElement = tableElement;
-//     this.noGradesElement = noGradesElement;
-//   }
-class GradeTable  {
+class GradeTable {
   constructor(tableElement) {
     this.tableElement = tableElement;
   }
 
-  updateGrades(grades)  {
+  updateGrades(grades) {
     this.tableElement.textContent = '';
-
-    // Old code for when I used the <p> element for No Grades Recorded
-    // if (grades.length) {
-    //   this.noGradesElement.classList.add('d-none');
-    // } else {
-    //   this.noGradesElement.classList.remove('d-none');
-    // }
-
     if (!grades.length) {
       var noGradesTr = document.createElement('tr');
       var noGradesTd = document.createElement('td');
@@ -28,14 +14,14 @@ class GradeTable  {
 
       noGradesTr.append(noGradesTd);
       this.tableElement.append(noGradesTr);
-    }
-
-    for (var i = 0; i < grades.length; i++) {
-      this.renderGradeRow(grades[i], this.deleteGrade)
+    } else {
+      for (var i = 0; i < grades.length; i++) {
+        this.tableElement.append(this.renderGradeRow(grades[i], this.deleteGrade))
+      }
     }
   }
 
-  onDeleteClick(deleteGrade)  {
+  onDeleteClick(deleteGrade) {
     this.deleteGrade = deleteGrade;
   }
 
@@ -57,15 +43,15 @@ class GradeTable  {
     var deleteButton = document.createElement('button');
     deleteButton.classList.add('btn-sm', 'btn-danger');
     deleteButton.textContent = 'Delete';
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', function () {
       deleteGrade(data['id']);
     });
 
     operationsTd.append(deleteButton);
     tr.append(nameTd, courseTd, gradeTd, operationsTd);
-    this.tableElement.append(tr);
 
-    // Not sure why return the tr
+    //return the tr so I can append the entire result of the method call on
+    // line 19
     return tr;
   }
 
